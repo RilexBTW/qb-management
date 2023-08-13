@@ -1,6 +1,24 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 local GangAccounts = {}
 
+
+--[[local src = source -- working on register gang stash on resource start
+local Player = QBCore.Functions.GetPlayer(src)
+local gang = Player.PlayerData.gang.name
+
+local stash = {
+    id = gang,
+    label = gang..'Stash',
+    slots = 50,
+    weight = 100000,
+}
+
+AddEventHandler('onServerResourceStart', function(resourceName)
+    if resourceName == 'ox_inventory' or resourceName == GetCurrentResourceName() then
+        exports.ox_inventory:RegisterStash(stash.id, stash.label, stash.slots, stash.weight)
+    end
+end) --]] 
+
 function GetGangAccount(account)
 	return GangAccounts[account] or 0
 end

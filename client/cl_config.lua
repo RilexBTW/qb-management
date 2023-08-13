@@ -22,11 +22,40 @@ Config.BossMenus = {
     ['mechanic'] = {
         vector3(-339.53, -156.44, 44.59),
     },
+    ['bennys'] = {
+        vector3(-195.73, -1315.07, 31.3),
+    },
+    ['redcircle'] = {
+        vector3(-318.57, 190.36, 103.94),
+    }, 
+    ['serenity'] = {
+        vector3(-502.04, 48.21, 44.66),
+    }, 
+    ['cookies'] = {
+        vector3(803.62, -103.45, 80.41),
+    },    
+    ['beanmachine'] = {
+        vector3(122.81, -1043.93, 29.28),
+    },   
+    ['lsc'] = {
+        vector3(-348.21, -131.1, 42.04),
+    },   
+    ['uwu'] = {   
+    vector3(-577.57, -1067.57, 26.61),
+    },   
+    ['pizzathis'] = {         
+    vector3(798.55, -750.69, 31.27),
+        },  
+
+
 }
+
+
 
 Config.BossMenuZones = {
     ['police'] = {
-        { coords = vector3(447.23, -974.3, 31.47), length = 1.35, width = 1.45, heading = 351.0, minZ = 30.00, maxZ = 31.73 },    },
+        { coords = vector3(461.45, -986.2, 30.73), length = 0.35, width = 0.45, heading = 351.0, minZ = 30.58, maxZ = 30.68 } ,
+    },
     ['ambulance'] = {
         { coords = vector3(335.46, -594.52, 43.28), length = 1.2, width = 0.6, heading = 341.0, minZ = 43.13, maxZ = 43.73 },
     },
@@ -39,8 +68,29 @@ Config.BossMenuZones = {
     ['cardealer'] = {
         { coords = vector3(-27.47, -1107.13, 27.27), length = 2.4, width = 1.05, heading = 340.0, minZ = 27.07, maxZ = 27.67 },
     },
-    ['mechanic'] = {
-        { coords = vector3(-339.53, -156.44, 44.59), length = 1.15, width = 2.6, heading = 353.0, minZ = 43.59, maxZ = 44.99 },
+    ['bennys'] = {
+        { coords = vector3(-195.73, -1315.07, 31.3), length = 1.15, width = 2.6, heading = 353.0, minZ = 43.59, maxZ = 44.99 },
+    },
+    ['redcircle'] = {
+        { coords = vector3(-318.57, 190.36, 103.94), length = 1.15, width = 2.6, heading = 353.0, minZ = 43.59, maxZ = 44.99 },
+    },
+    ['serenity'] = {
+        { coords = vector3(-502.04, 48.21, 44.66), length = 1.15, width = 2.6, heading = 353.0, minZ = 43.59, maxZ = 44.99 },
+    },   
+    ['cookies'] = { 
+        { coords = vector3(803.62, -103.45, 80.41), length = 1.15, width = 2.6, heading = 353.0, minZ = 43.59, maxZ = 44.99 },
+    },     
+    ['cookies'] = { 
+        { coords = vector3(122.81, -1043.93, 29.28), length = 1.15, width = 2.6, heading = 353.0, minZ = 43.59, maxZ = 44.99 },
+    },
+    ['lsc'] = { 
+        { coords = vector3(-348.21, -131.1, 42.04), length = 1.15, width = 2.6, heading = 353.0, minZ = 43.59, maxZ = 44.99 },
+    },
+    ['uwu'] = { 
+        { coords =  vector3(-577.57, -1067.57, 26.61), length = 1.15, width = 2.6, heading = 353.0, minZ = 43.59, maxZ = 44.99 },
+    },
+    ['pizzathis'] = { 
+        { coords =  vector3(798.55, -750.69, 31.27), length = 1.15, width = 2.6, heading = 353.0, minZ = 43.59, maxZ = 44.99 },
     },
 }
 
@@ -49,7 +99,7 @@ Config.GangMenus = {
         vector3(0, 0, 0),
     },
     ['ballas'] = {
-        vector3(0, 0, 0),
+        vector3(-0.43, -1810.48, 29.15),
     },
     ['vagos'] = {
         vector3(0, 0, 0),
@@ -58,8 +108,22 @@ Config.GangMenus = {
         vector3(0, 0, 0),
     },
     ['families'] = {
-        vector3(0, 0, 0),
+        vector3(-158.83, -1599.38, 39.91),
     },
+    ['soa'] = {
+        vector3(977.15, -104.66, 74.61),
+    },
+    ['crips'] = {
+        vector3(1251.24, -1580.97, 58.17),
+    },       
+    ['mafia'] = {
+        vector3(-1510.73, 102.6, 52.24),
+    },    
+    ['anon'] = {
+        vector3(-1079.62, -1679.75, 4.58),
+    },        
+
+    
 }
 
 Config.GangMenuZones = {

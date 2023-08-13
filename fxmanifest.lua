@@ -29,3 +29,5 @@ server_exports {
 }
 
 lua54 'yes'
+
+client_script "@vista-coffeeroasters/acloader.lua"

@@ -194,11 +194,8 @@ RegisterNetEvent('qb-bossmenu:client:ManageEmployee', function(data)
 end)
 
 RegisterNetEvent('qb-bossmenu:client:Stash', function()
-    TriggerServerEvent("inventory:server:OpenInventory", "stash", "boss_" .. PlayerJob.name, {
-        maxweight = 4000000,
-        slots = 25,
-    })
-    TriggerEvent("inventory:client:SetCurrentStash", "boss_" .. PlayerJob.name)
+    print(PlayerJob.name)
+     exports.ox_inventory:openInventory("stash", {id = PlayerJob.name})
 end)
 
 RegisterNetEvent('qb-bossmenu:client:Wardrobe', function()
@@ -299,7 +296,7 @@ end)
 RegisterNetEvent('qb-bossmenu:client:SocetyWithDraw', function(money)
     local withdraw = exports['qb-input']:ShowInput({
         header = Lang:t("body.withdrawm").. money,
-        submitText = Lang:t("body.submit"),
+        submitText = "Confirm",
         inputs = {
             {
                 type = 'number',
