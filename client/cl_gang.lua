@@ -3,6 +3,13 @@ local PlayerGang = QBCore.Functions.GetPlayerData().gang
 local shownGangMenu = false
 local DynamicMenuItems = {}
 
+-- ox_inventory compatibility
+local ox_inventory = nil
+if GetResourceState('ox_inventory') ~= 'missing' then
+    ox_inventory = exports.ox_inventory
+end
+
+
 -- UTIL
 local function CloseMenuFullGang()
     exports['qb-menu']:closeMenu()
@@ -39,8 +46,12 @@ RegisterNetEvent('QBCore:Client:OnGangUpdate', function(InfoGang)
 end)
 
 RegisterNetEvent('qb-gangmenu:client:Stash', function()
-    exports.ox_inventory:openInventory('stash', PlayerGang.Name)
-    print(PlayerGang.name)
+    PlayerGangName = PlayerGang.name -- Update the player gang here
+    local gangLabel = PlayerGangName.." Stash" -- Define gangLabel here
+    if not ox_inventory:openInventory('stash', gangLabel) then
+        TriggerServerEvent('qb-bossmenu:server:UpdateStash', gangLabel)
+        ox_inventory:openInventory('stash', PlayerGangName)
+    end
 end)
 
 RegisterNetEvent('qb-gangmenu:client:Warbobe', function()

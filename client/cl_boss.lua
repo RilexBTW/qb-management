@@ -194,7 +194,7 @@ RegisterNetEvent('qb-bossmenu:client:ManageEmployee', function(data)
 end)
 
 RegisterNetEvent('qb-bossmenu:client:Stash', function()
-    print(PlayerJob.name)
+    print(PlayerJob.name.. "test")
      exports.ox_inventory:openInventory("stash", {id = PlayerJob.name})
 end)
 

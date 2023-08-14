@@ -248,3 +248,31 @@ QBCore.Functions.CreateCallback('qb-gangmenu:getplayers', function(source, cb)
 		end)
 	cb(players)
 end)
+
+
+RegisterNetEvent('qb-bossmenu:server:UpdateStash', function(cl_label)
+	src = source
+	local Player = QBCore.Functions.GetPlayer(src)
+	local gang = Player.PlayerData.gang.name
+	
+	local stash = {
+		id = gang,
+		label = cl_label,
+	}
+	print('general test')
+	if ox_inventory then
+		TriggerEvent('qb-bossmenu:server:RegisterStash', stash.id, stash.label) -- rename the stash name in case of apartment change
+		print('running test 2')
+	end 
+	
+	end)
+	
+	
+	
+	if GetResourceState('ox_inventory') ~= 'missing' then
+		ox_inventory = exports.ox_inventory
+		RegisterNetEvent('qb-bossmenu:server:RegisterStash', function(gangStashName, gangStashLabel)
+			ox_inventory:RegisterStash(gangStashName, gangStashLabel, 100, 1000000)
+			print('running test 3')
+		end)
+	end
